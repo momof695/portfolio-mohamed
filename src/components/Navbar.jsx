@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Code2 } from 'lucide-react';
+import { Code2, Menu, X } from 'lucide-react';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,11 +21,22 @@ const Navbar = () => {
           <Code2 className="logo-icon" />
           MOHAMED
         </a>
-        <ul className="nav-links">
-          <li><a href="#accueil">Accueil</a></li>
-          <li><a href="#apropos">À propos</a></li>
-          <li><a href="#experience">Mes expériences</a></li>
-          <li><a href="#projets">Mes projets</a></li>
+        
+        {/* Icône burger (visible uniquement sur mobile) */}
+        <button 
+          className="menu-burger"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle menu"
+        >
+          {menuOpen ? <X size={28} /> : <Menu size={28} />}
+        </button>
+
+        {/* Menu (se transforme en menu latéral sur mobile) */}
+        <ul className={`nav-links ${menuOpen ? 'menu-active' : ''}`}>
+          <li><a href="#accueil" onClick={() => setMenuOpen(false)}>Accueil</a></li>
+          <li><a href="#apropos" onClick={() => setMenuOpen(false)}>À propos</a></li>
+          <li><a href="#experience" onClick={() => setMenuOpen(false)}>Mes expériences</a></li>
+          <li><a href="#projets" onClick={() => setMenuOpen(false)}>Mes projets</a></li>
         </ul>
       </div>
     </nav>
