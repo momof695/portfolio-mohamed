@@ -606,6 +606,9 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 968px) {
+  .logo{
+    font-size: 1rem;
+  }
   .hero-container {
     grid-template-columns: 1fr;
     text-align: center;
@@ -621,6 +624,11 @@ footer {
   
   .nav-links {
     gap: 1rem;
+    font-size: 0.75rem;
+  }
+
+  .nav-links a{
+    padding: 0.5rem;
   }
   
   .hero-content h1 {
@@ -647,7 +655,7 @@ footer {
     padding: 0.75rem 1rem;
     justify-content: center;
   }
-  
+
   .section-title {
     font-size: 2rem;
   }
