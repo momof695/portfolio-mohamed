@@ -148,7 +148,7 @@ html {
   }
 
   /* Quand le menu est ouvert */
-  .nav-links.menu-active {
+  .nav-links.active {
     right: 0;
   }
 
