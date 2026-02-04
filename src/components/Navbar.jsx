@@ -32,7 +32,7 @@ const Navbar = () => {
         </button>
 
         {/* Menu (se transforme en menu latéral sur mobile) */}
-        <ul className={`nav-links ${menuOpen ? 'menu-active' : ''}`}>
+        <ul className={`nav-links ${menuOpen ? 'active' : ''}`}>
           <li><a href="#accueil" onClick={() => setMenuOpen(false)}>Accueil</a></li>
           <li><a href="#apropos" onClick={() => setMenuOpen(false)}>À propos</a></li>
           <li><a href="#experience" onClick={() => setMenuOpen(false)}>Mes expériences</a></li>
