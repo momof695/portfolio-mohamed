@@ -27,14 +27,14 @@ const Projects = () => {
       demoLink: "#",
       codeLink: "#"
     },
-    {
+    /*{
       title: "API REST avec Node.js",
       description: "API RESTful complète avec authentification JWT, gestion des utilisateurs et CRUD. Documentation avec Swagger.",
       image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=500&h=300&fit=crop",
       tags: ["Node.js", "Express", "JWT"],
       demoLink: "#",
       codeLink: "#"
-    },
+    },*/
     {
       title: "Application Météo",
       description: "Application web affichant les prévisions météorologiques en temps réel en utilisant une API externe. Interface claire et responsive.",
