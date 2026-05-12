@@ -8,7 +8,7 @@ const projects = [
       'Application de suivi des finances personnelles : tableau de bord, catégorisation des dépenses, historique et statistiques visuelles. API REST sécurisée côté Laravel, interface réactive React.',
     image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&h=350&fit=crop',
     tags: ['React', 'Laravel', 'Tailwind CSS', 'PostgreSQL'],
-    demoLink: null,
+    demoLink: 'https://budgettrack-frontend-mt8l.onrender.com',
     codeLink: null,
     inProgress: false,
   },

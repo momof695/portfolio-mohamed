@@ -7,29 +7,25 @@ const About = () => {
       icon: <Monitor />,
       title: 'Développement Frontend',
       description:
-        'Solides bases en HTML, CSS et JavaScript acquises durant ma formation de 3 ans. Création d\'interfaces modernes et responsives.',
-      cyber: false,
+        "Solides bases en HTML, CSS et JavaScript acquises durant ma formation de 3 ans. Création d'interfaces modernes et responsives avec React et Angular.",
     },
     {
       icon: <Server />,
       title: 'Développement Backend',
       description:
-        'Développement d\'APIs et d\'applications métier avec PHP, Laravel, Spring Boot et Python. Architecture MVC, REST, gestion de bases de données relationnelles.',
-      cyber: false,
+        "Développement d'APIs et d'applications métier avec PHP, Laravel, Spring Boot et Python. Architecture MVC, REST, gestion de bases de données relationnelles.",
     },
     {
       icon: <Palette />,
       title: 'Design UI/UX',
       description:
-        'Conception d\'interfaces attrayantes et intuitives avec Figma en appliquant les principes d\'ergonomie et d\'accessibilité.',
-      cyber: false,
+        "Conception d'interfaces attrayantes et intuitives avec Figma en appliquant les principes d'ergonomie et d'accessibilité.",
     },
     {
       icon: <ShieldCheck />,
       title: 'Cybersécurité — ma prochaine étape',
       description:
-        'Certifié Google Cybersecurity (2026). En développant des applications, j\'ai compris que sécuriser le code est aussi important que l\'écrire. Je travaille à approfondir la sécurité web, le pentest et la gestion des accès.',
-      cyber: true,
+        "Certifié Google Cybersecurity (2026). En développant des applications, j'ai compris que sécuriser le code est aussi important que l'écrire. Je travaille à approfondir la sécurité web, le pentest et la gestion des accès.",
     },
   ];
 
@@ -47,34 +43,12 @@ const About = () => {
           </div>
           <div className="skills-list">
             {skills.map((skill, index) => (
-              <div
-                key={index}
-                className="skill-item"
-                style={
-                  skill.cyber
-                    ? { borderLeft: '4px solid var(--accent-cyber)' }
-                    : {}
-                }
-              >
-                <div
-                  className="skill-icon"
-                  style={
-                    skill.cyber
-                      ? {
-                          background: 'var(--accent-cyber-dim)',
-                          border: '1px solid var(--accent-cyber-border)',
-                        }
-                      : {}
-                  }
-                >
-                  <span style={skill.cyber ? { color: 'var(--accent-cyber)' } : {}}>
-                    {skill.icon}
-                  </span>
+              <div key={index} className="skill-item">
+                <div className="skill-icon">
+                  {skill.icon}
                 </div>
                 <div className="skill-content">
-                  <h3 style={skill.cyber ? { color: 'var(--accent-cyber)' } : {}}>
-                    {skill.title}
-                  </h3>
+                  <h3>{skill.title}</h3>
                   <p>{skill.description}</p>
                 </div>
               </div>
