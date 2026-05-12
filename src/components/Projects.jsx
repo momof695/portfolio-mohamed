@@ -141,29 +141,35 @@ const ProjectCard = ({ project }) => {
         </div>
 
         <div className="project-links">
-          <span
-            className="project-link btn-demo"
-            style={{
-              opacity: project.demoLink ? 1 : 0.35,
-              cursor: project.demoLink ? 'pointer' : 'default',
-              pointerEvents: project.demoLink ? 'auto' : 'none',
-            }}
-            {...(project.demoLink
-              ? { as: 'a', href: project.demoLink, target: '_blank', rel: 'noopener noreferrer' }
-              : {})}
-          >
-            Demo <ExternalLink size={16} />
-          </span>
-          <span
-            className="project-link btn-code"
-            style={{
-              opacity: project.codeLink ? 1 : 0.35,
-              cursor: project.codeLink ? 'pointer' : 'default',
-              pointerEvents: project.codeLink ? 'auto' : 'none',
-            }}
-          >
-            <Github size={16} />
-          </span>
+          {project.demoLink ? (
+            <a
+              href={project.demoLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="project-link btn-demo"
+            >
+              Demo <ExternalLink size={16} />
+            </a>
+          ) : (
+            <span className="project-link btn-demo" style={{ opacity: 0.35, cursor: 'default' }}>
+              Demo <ExternalLink size={16} />
+            </span>
+          )}
+
+          {project.codeLink ? (
+            <a
+              href={project.codeLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="project-link btn-code"
+            >
+              <Github size={16} />
+            </a>
+          ) : (
+            <span className="project-link btn-code" style={{ opacity: 0.35, cursor: 'default' }}>
+              <Github size={16} />
+            </span>
+          )}
         </div>
       </div>
     </div>
