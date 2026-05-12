@@ -37,7 +37,7 @@ const Experience = () => {
     }
   ];
 
-  const certifications = [
+  /*const certifications = [
     {
       title: "Build a Full Website Using WordPress",
       organization: "coursera",
@@ -60,7 +60,7 @@ const Experience = () => {
       date: "2026"
     }
   ];
-
+*/
   return (
     <section id="experience">
       <div className="container">
