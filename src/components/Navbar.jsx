@@ -9,7 +9,6 @@ const Navbar = () => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -21,9 +20,8 @@ const Navbar = () => {
           <Code2 className="logo-icon" />
           MOHAMED
         </a>
-        
-        {/* Icône burger (visible uniquement sur mobile) */}
-        <button 
+
+        <button
           className="menu-burger"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
@@ -31,12 +29,20 @@ const Navbar = () => {
           {menuOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
 
-        {/* Menu (se transforme en menu latéral sur mobile) */}
         <ul className={`nav-links ${menuOpen ? 'active' : ''}`}>
           <li><a href="#accueil" onClick={() => setMenuOpen(false)}>Accueil</a></li>
           <li><a href="#apropos" onClick={() => setMenuOpen(false)}>À propos</a></li>
-          <li><a href="#experience" onClick={() => setMenuOpen(false)}>Mes expériences</a></li>
-          <li><a href="#projets" onClick={() => setMenuOpen(false)}>Mes projets</a></li>
+          <li><a href="#projets" onClick={() => setMenuOpen(false)}>Projets</a></li>
+          <li>
+            <a
+              href="#cybersecurite"
+              className="cyber-link"
+              onClick={() => setMenuOpen(false)}
+            >
+              Cybersécurité
+            </a>
+          </li>
+          <li><a href="#experience" onClick={() => setMenuOpen(false)}>Expériences</a></li>
         </ul>
       </div>
     </nav>

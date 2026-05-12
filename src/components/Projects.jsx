@@ -1,56 +1,38 @@
 import React from 'react';
-import { ExternalLink, Github } from 'lucide-react';
+import { ExternalLink, Github, Clock } from 'lucide-react';
 
 const Projects = () => {
   const projects = [
     {
-      title: "Application de Gestion de Tâches",
-      description: "Application web permettant de créer, organiser et suivre ses tâches quotidiennes. Interface intuitive avec système d'authentification et stockage des données.",
-      image: "https://images.unsplash.com/photo-1557821552-17105176677c?w=500&h=300&fit=crop",
-      tags: ["React", "Node.js", "MongoDB"],
-      demoLink: "#",
-      codeLink: "#"
+      title: 'BISCHOOL',
+      description:
+        'Application web de gestion scolaire : élèves, personnel, départements, utilisateurs. Authentification, soft delete, audit log des actions, DataTables server-side.',
+      image: 'https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=500&h=300&fit=crop',
+      tags: ['PHP', 'MySQL', 'PDO', 'DataTables', 'SweetAlert2'],
+      demoLink: null,
+      codeLink: null,
+      inProgress: true,
     },
     {
-      title: "Site Portfolio Personnel",
-      description: "Portfolio moderne et responsive présentant mes projets et compétences. Design épuré avec animations fluides et navigation intuitive.",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&h=300&fit=crop",
-      tags: ["React", "CSS3", "Vite"],
-      demoLink: "#",
-      codeLink: "#"
+      title: 'Gestion Immobilière',
+      description:
+        'Application de gestion de biens immobiliers avec suivi des locataires, contrats et paiements. Modélisation UML, interface responsive.',
+      image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=500&h=300&fit=crop',
+      tags: ['HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL'],
+      demoLink: null,
+      codeLink: null,
+      inProgress: false,
     },
     {
-      title: "Clone d'Interface UI",
-      description: "Reproduction fidèle d'une interface utilisateur moderne pour pratiquer l'intégration front-end et le design responsive.",
-      image: "https://images.unsplash.com/photo-1555421689-d68471e189f2?w=500&h=300&fit=crop",
-      tags: ["HTML", "CSS", "JavaScript"],
-      demoLink: "#",
-      codeLink: "#"
+      title: 'Gestion Hôtelière',
+      description:
+        'Système de réservation et gestion de chambres avec administration des clients. Modélisation MERISE, interface complète front et back.',
+      image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=500&h=300&fit=crop',
+      tags: ['HTML', 'CSS', 'PHP', 'MySQL', 'MERISE'],
+      demoLink: null,
+      codeLink: null,
+      inProgress: false,
     },
-    /*{
-      title: "API REST avec Node.js",
-      description: "API RESTful complète avec authentification JWT, gestion des utilisateurs et CRUD. Documentation avec Swagger.",
-      image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=500&h=300&fit=crop",
-      tags: ["Node.js", "Express", "JWT"],
-      demoLink: "#",
-      codeLink: "#"
-    },*/
-    {
-      title: "Application Météo",
-      description: "Application web affichant les prévisions météorologiques en temps réel en utilisant une API externe. Interface claire et responsive.",
-      image: "https://images.unsplash.com/photo-1561484930-998b6a7b22e8?w=500&h=300&fit=crop",
-      tags: ["React", "API", "CSS3"],
-      demoLink: "#",
-      codeLink: "#"
-    },
-    {
-      title: "Jeu Interactif JavaScript",
-      description: "Jeu développé en JavaScript pur avec gestion des scores, animations et interactions utilisateur. Bon exercice de logique de programmation.",
-      image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=500&h=300&fit=crop",
-      tags: ["JavaScript", "HTML5", "CSS3"],
-      demoLink: "#",
-      codeLink: "#"
-    }
   ];
 
   return (
@@ -60,7 +42,37 @@ const Projects = () => {
         <div className="projects-grid">
           {projects.map((project, index) => (
             <div key={index} className="project-card">
-              <img src={project.image} alt={project.title} className="project-image" />
+              <div style={{ position: 'relative' }}>
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="project-image"
+                />
+                {project.inProgress && (
+                  <span
+                    style={{
+                      position: 'absolute',
+                      top: '1rem',
+                      right: '1rem',
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '0.35rem',
+                      background: 'rgba(255,154,60,0.15)',
+                      border: '1px solid var(--accent-orange)',
+                      color: 'var(--accent-orange)',
+                      fontFamily: 'var(--font-mono)',
+                      fontSize: '0.7rem',
+                      fontWeight: 600,
+                      padding: '0.3rem 0.75rem',
+                      borderRadius: '4px',
+                    }}
+                  >
+                    <Clock size={12} />
+                    En cours
+                  </span>
+                )}
+              </div>
+
               <div className="project-content">
                 <h3>{project.title}</h3>
                 <p className="project-description">{project.description}</p>
@@ -69,13 +81,40 @@ const Projects = () => {
                     <span key={idx} className="tag">{tag}</span>
                   ))}
                 </div>
+
                 <div className="project-links">
-                  <a href={project.demoLink} className="project-link btn-demo">
-                    Demo <ExternalLink size={16} />
-                  </a>
-                  <a href={project.codeLink} className="project-link btn-code">
-                    <Github size={16} />
-                  </a>
+                  {project.demoLink ? (
+                    <a href={project.demoLink} className="project-link btn-demo">
+                      Demo <ExternalLink size={16} />
+                    </a>
+                  ) : (
+                    <span
+                      className="project-link btn-demo"
+                      style={{
+                        opacity: 0.4,
+                        cursor: 'default',
+                        pointerEvents: 'none',
+                      }}
+                    >
+                      Demo <ExternalLink size={16} />
+                    </span>
+                  )}
+                  {project.codeLink ? (
+                    <a href={project.codeLink} className="project-link btn-code">
+                      <Github size={16} />
+                    </a>
+                  ) : (
+                    <span
+                      className="project-link btn-code"
+                      style={{
+                        opacity: 0.4,
+                        cursor: 'default',
+                        pointerEvents: 'none',
+                      }}
+                    >
+                      <Github size={16} />
+                    </span>
+                  )}
                 </div>
               </div>
             </div>
