@@ -33,6 +33,8 @@ const techCategories = [
       { name: 'PostgreSQL', color: '#336791' },
       { name: 'NoSQL',      color: '#47A248' },
       { name: 'Oracle',     color: '#F80000' },
+      { name: 'MONGO DB',     color: '#9B59B6' },
+
     ],
   },
   {
@@ -51,17 +53,17 @@ const timeline = [
   {
     year: '2023',
     title: 'Entrée en formation',
-    detail: 'DUT Technologie du Génie Informatique — Ouagadougou',
+    detail: 'Licence Technologie du Génie Informatique — Ouagadougou',
   },
   {
     year: '2024',
     title: 'Spécialisation développement web',
-    detail: 'Approfondissement PHP, bases de données, architecture MVC',
+    detail: 'Approfondissement des techniques de programmation, bases de données, architecture MVC',
   },
   {
     year: '2025',
     title: 'Projets full-stack & certifications',
-    detail: 'Développement de projets personnels React / Laravel / Spring Boot',
+    detail: 'Développement de projets personnels',
   },
   {
     year: '2026',
@@ -86,23 +88,23 @@ const certifications = [
     emoji: '🔒',
   },
   // ── Slot 2 — décommenter et remplir quand disponible ──
-  // {
-  //   title: '',
-  //   organization: '',
-  //   image: null,
-  //   pdfLink: null,
-  //   date: '',
-  //   emoji: '🏅',
-  // },
+  {
+     title: '',
+     organization: '',
+     image: null,
+     pdfLink: null,
+     date: '',
+     emoji: '🏅',
+   },
   // ── Slot 3 ──
-  // {
-  //   title: '',
-  //   organization: '',
-  //   image: null,
-  //   pdfLink: null,
-  //   date: '',
-  //   emoji: '🏅',
-  // },
+   {
+     title: '',
+     organization: '',
+     image: null,
+     pdfLink: null,
+     date: '',
+     emoji: '🏅',
+   },
 ];
 
 /* ─────────────────────────────────────────────

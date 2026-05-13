@@ -114,8 +114,7 @@ const Cybersecurite = () => {
         <div className="cyber-why">
           <p className="cyber-why-label">// pourquoi la cybersécurité ?</p>
           <p>
-            En développant des applications — de la gestion hôtelière à{' '}
-            <strong>BISCHOOL</strong> — j'ai compris qu'authentification, gestion
+            En développant des applications — j'ai compris qu'authentification, gestion
             des droits et audit de logs ne sont pas des détails : ce sont les
             fondations. <strong>Construire sans sécuriser, c'est bâtir sur du sable.</strong>{' '}
             Je travaille à relier les deux disciplines : concevoir du code solide

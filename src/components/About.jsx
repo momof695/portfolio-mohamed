@@ -7,19 +7,19 @@ const About = () => {
       icon: <Monitor />,
       title: 'Développement Frontend',
       description:
-        "Solides bases en HTML, CSS et JavaScript acquises durant ma formation de 3 ans. Création d'interfaces modernes et responsives avec React et Angular.",
+        "Solides bases en dévéloppement acquises durant ma formation. Création d'interfaces modernes et responsives.",
     },
     {
       icon: <Server />,
       title: 'Développement Backend',
       description:
-        "Développement d'APIs et d'applications métier avec PHP, Laravel, Spring Boot et Python. Architecture MVC, REST, gestion de bases de données relationnelles.",
+        "Développement d'APIs et d'applications métier. Architecture MVC, REST, gestion de bases de données relationnelles.",
     },
     {
       icon: <Palette />,
       title: 'Design UI/UX',
       description:
-        "Conception d'interfaces attrayantes et intuitives avec Figma en appliquant les principes d'ergonomie et d'accessibilité.",
+        "Conception d'interfaces attrayantes et intuitives en appliquant les principes d'ergonomie et d'accessibilité.",
     },
     {
       icon: <ShieldCheck />,
