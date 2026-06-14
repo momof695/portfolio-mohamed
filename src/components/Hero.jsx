@@ -30,7 +30,7 @@ const Hero = () => {
           <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
             <a href="mailto:sawadogom816@gmail.com" className="cta-button">
               <Mail size={20} />
-              Contacter moi
+              Contacter moi%
             </a>
             <a
               href="/CV-Mohamed.pdf"
